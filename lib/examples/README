@@ -1,0 +1,10 @@
+Install webtcp
+Clone the repo
+git clone https://github.com/yankov/webtcp
+
+Install dependencies
+cd webtcp
+npm install
+
+Run WebTCP server
+cd examples && node server

@@ -1,0 +1,26 @@
+<script src="./webtcp-0.0.1.min.js"></script>
+<script src="../browser-index.js"></script>
+<script>
+
+var tcp = new WebTCP('127.0.0.1', 9999);
+var fb = require("node-firebird");
+fb.attach(
+    {
+        host: '127.0.0.1',
+        database: 'database.fdb',
+        user: 'SYSDBA',
+	port: '3050',
+        password: 'masterkey'
+    },
+    function(err, db){
+        if (err) {
+            console.log(err.message);
+        } else {
+            database = db;
+            console.log("connected");
+        }
+    }
+);
+
+
+</script>
